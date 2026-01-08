@@ -6,6 +6,6 @@
   * I used data specially from "Elevation Products.../1-meter DEM" use the "extent" filter feature to quickly search all the LiDAR scans of the selected area (you can also use the show feature to see if these models cover the area you are interested in) 
 
 
-
 # DEM Analysis
 
+'''gdalbuildvrt Indian" "Peaks/mosaic.vrt "Indian Peaks/DEM Models/*.tif"'''
