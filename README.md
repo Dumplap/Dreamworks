@@ -9,28 +9,18 @@
 # DEM Analysis
 
 ### I used the following file structure
-Main Project
-├── docs/                 # Core content files
-│   ├── index.md          # Homepage / Introduction
-│   ├── getting-started/
-│   │   ├── install.md
-│   │   └── config.md
-│   ├── guides/
-│   │   ├── advanced-usage.md
-│   │   └── troubleshooting.md
-│   └── api/
-│       └── reference.md
-├── assets/               # Non-markdown files
-│   ├── images/           # Screenshots and diagrams
-│   │   └── architecture.png
-│   ├── pdfs/             # Downloadable resources
-│   └── templates/        # Reusable snippets or boilerplate
-├── .github/              # Automation (if using GitHub)
-│   └── workflows/
-│       └── deploy.yml
-├── .gitignore            # Files to exclude from version control
-├── mkdocs.yml            # Config (if using MkDocs) or docusaurus.config.js
-├── README.md             # Project overview for developers
-└── SUMMARY.md            # Table of contents (used by GitBook/mdBook)
+    using this stucture will ensure compatibility with the commands given and script loops.
+```Main Project
+├── Aspen/                  # Name of location, matches the list in the master.py
+│   ├── DEM Models/        
+│   │   └── .tif            # All tif files of the area
+│   └── moasic.vrt          # these will be generated with a later command
+├── RMNP/                   # same as the other locations, ex. Aspen
+│   ├── DEM Models/
+│   │   └── .tif
+│   └── moasic.vrt
+├── Results/                # output folder
+└── Master.py
+```
 
 ```gdalbuildvrt RMNP/mosaic.vrt "RMNP/DEM Models/*.tif"```
