@@ -14,10 +14,13 @@
 
 
 2. From here you can then run the program with minor adjustments to the regression's and tweak the other variables (min dist, max dist, step sixe,tolerance, and even time range) 
-    * Note that the first time you run the analysis it will take signifantly longer (3-5min) as it will be finding ridglines and generating a view shead map to overlay the alingments onto, these will both be chached so the whole simulation should only take about 15sec every time you run it after.
+    * Note that the first time you run the analysis it will take signifantly longer (3-5min) as it will be finding ridglines and generating a view shead map to overlay the alingments onto, these will then be chached speeding it up from here on out.
 
 
 
+# Visualizing The Data
+
+After running completing an analysis there's 2 other scripts that allow the data to be visualized. The ```CalTopo Cords.cpp``` will take in a lon/lat of the camera position in DD format and output a  .json  that can be imported directly into CalTopo allowing the points to be visually linked. Those same lat/lon can then also be fed into ```Moon Grapher.py``` which will create a graph of the ridgeline and the moons posion at 5min before intersect, intersect, and disapearance. 
 
 
 ## Additional Information
@@ -26,7 +29,8 @@
 
 using this stucture will ensure compatibility with the commands given and script loops.
 
-```Main Project
+```
+Main Project
 ├── Aspen/                  # Name of location, matches the list in the master.py
 │   ├── DEM Models/        
 │   │   └── .tif            # All tif files of the area
@@ -36,7 +40,11 @@ using this stucture will ensure compatibility with the commands given and script
 │   │   └── .tif
 │   └── moasic.vrt
 ├── Results/                # output folder
+├── Lunar Plots/            # output folder
+├── Moon Grapher.py
 └── Master.py
+ALT Folder
+└── Pink.cpp
 ```
 
 
